@@ -73,7 +73,7 @@ python scripts/gold_upload.py
 
 ### 1. World Cup Statistics Dashboard
 - **Purpose**: Provides an overarching view of FIFA World Cup tournaments, including metrics on goals, matches, host countries, and winners.
-- **Metrics**:
+- **Metrics Example**:
   - Total Goals: Total goals scored across tournaments.
   - Total Matches: Number of matches per tournament.
   - Host Country and Winner Information.
@@ -84,7 +84,7 @@ python scripts/gold_upload.py
 
 ### 2. Team Performance Dashboard
 - **Purpose**: Analyzes each team’s performance, including interactions with other teams and match statistics.
-- **Metrics**:
+- **Metrics Example**:
   - Goals scored
   - Bookings (Yellow and Red cards)
   - Substitutions during matches
