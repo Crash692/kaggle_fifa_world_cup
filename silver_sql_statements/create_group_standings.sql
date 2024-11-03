@@ -1,0 +1,21 @@
+CREATE TABLE IF NOT EXISTS silver.group_standings (
+    key_id INT PRIMARY KEY,
+    tournament_id VARCHAR(255),
+    tournament_name VARCHAR(255),
+    stage_number INTEGER,
+    stage_name VARCHAR(255),
+    group_name VARCHAR(255),
+    position INTEGER,
+    team_id VARCHAR(255),
+    team_name VARCHAR(255),
+    team_code VARCHAR(10),
+    played INTEGER,
+    wins INTEGER,
+    draws INTEGER,
+    losses INTEGER,
+    goals_for INTEGER,
+    goals_against INTEGER,
+    goal_difference INTEGER,
+    points INTEGER,
+    advanced INTEGER
+);

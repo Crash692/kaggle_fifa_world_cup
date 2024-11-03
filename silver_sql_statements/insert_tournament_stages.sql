@@ -1,0 +1,36 @@
+INSERT INTO silver.tournament_stages (
+    key_id, 
+    tournament_id, 
+    tournament_name, 
+    stage_number, 
+    stage_name, 
+    group_stage, 
+    knockout_stage, 
+    unbalanced_groups, 
+    start_date, 
+    end_date, 
+    count_matches, 
+    count_teams, 
+    count_scheduled, 
+    count_replays, 
+    count_playoffs, 
+    count_walkovers
+)
+SELECT 
+    key_id, 
+    tournament_id, 
+    INITCAP(tournament_name) AS tournament_name, 
+    stage_number, 
+    INITCAP(stage_name) AS stage_name, 
+    group_stage, 
+    knockout_stage, 
+    unbalanced_groups, 
+    start_date::DATE, 
+    end_date::DATE, 
+    count_matches, 
+    count_teams, 
+    count_scheduled, 
+    count_replays, 
+    count_playoffs, 
+    count_walkovers
+FROM bronze.tournament_stages;
