@@ -81,10 +81,6 @@ python scripts/gold_upload.py
   - Host Country
   - Tournament Name
   - Winner
-- **Additional Insights**:
-  - Goals Per Match
-  - Top Scorers Per Tournament
-  - Most Common Stadiums
 
 ### 2. Team Performance Dashboard
 - **Purpose**: Analyzes each team’s performance, including interactions with other teams and match statistics.
@@ -94,7 +90,3 @@ python scripts/gold_upload.py
   - Substitutions during matches
 - **Match Details**:
   - Opponent Teams and Match Results (Win, Loss, Draw)
-- **Additional Insights**:
-  - Win/Loss Ratio
-  - Average Goals Per Match
-  - Key Player Contributions (Goals, Assists)
