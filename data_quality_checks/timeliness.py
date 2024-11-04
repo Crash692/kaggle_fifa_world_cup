@@ -2,7 +2,7 @@ import csv
 import psycopg2
 
 def check_timeliness_per_row(table, date_column, primary_key_column, cursor):
-    # Define World Cup years from 2018 back to 1902 in descending order
+    # Define World Cup years from 2018 back to 1930 in descending order
     world_cup_years = tuple(range(2018, 1930, -4))
 
     # Query to check each row for timeliness with respect to World Cup years and summer months
@@ -22,9 +22,9 @@ def check_timeliness_per_row(table, date_column, primary_key_column, cursor):
     # Save results to a CSV file
     with open(f"{table}_timeliness.csv", mode="w", newline="") as csvfile:
         writer = csv.writer(csvfile)
-        writer.writerow([primary_key_column, date_column, "Timeliness_Result"])  # Header row
+        writer.writerow([primary_key_column, date_column, "Timeliness_Result"]) 
         for row in rows:
-            writer.writerow(row)  # Each row includes primary key, date, and result
+            writer.writerow(row) 
 
 def main():
     # Database configuration

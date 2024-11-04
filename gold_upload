@@ -22,6 +22,7 @@ execution_order = [
     "Dim_Stadiums.sql",
     "Dim_Teams.sql",
     "Dim_Tournaments.sql",
+    "Dim_Awards.sql",
     
     # Fact tables
     "Fact_Match_Result.sql",
@@ -31,7 +32,8 @@ execution_order = [
     "Fact_Penalty_Kicks.sql",
     "Fact_Referee_Apperances.sql",
     "Fact_Substitutions.sql",
-    "Fact_Team_Apperances.sql"
+    "Fact_Team_Apperances.sql",
+    "Fact_Awards_Winners.sql"
 ]
 
 def execute_sql_file(cursor, file_path):
