@@ -36,7 +36,7 @@ def main():
     accuracy_results = pd.DataFrame(result, columns=["Match_ID", "Home_Team_Score", "Away_Team_Score", "Accuracy_Status"])
 
     # Save to CSV
-    accuracy_results.to_csv("matches_accuracy_results.csv", index=False)
+    accuracy_results.to_csv("data_quality_results/matches_accuracy_results.csv", index=False)
 
     # Close the connection
     cursor.close()

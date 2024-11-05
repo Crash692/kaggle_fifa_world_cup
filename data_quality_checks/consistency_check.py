@@ -180,7 +180,7 @@ print("Database connection closed.")
 # Save inconsistencies to CSV if any
 if inconsistencies:
     df_inconsistencies = pd.DataFrame(inconsistencies)
-    df_inconsistencies.to_csv('consistency.csv', index=False)
+    df_inconsistencies.to_csv('data_quality_results/consistency.csv', index=False)
     print("Inconsistencies saved to 'consistency.csv'.")
 else:
     print("No provided connections.")
