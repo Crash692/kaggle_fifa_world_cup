@@ -2,6 +2,7 @@ CREATE TABLE IF NOT EXISTS gold.Dim_Players (
     player_id VARCHAR PRIMARY KEY,
     family_name TEXT,
     given_name TEXT,
+    full_name TEXT,
     birth_date DATE,
     position TEXT,
     player_wikipedia_link TEXT
@@ -12,6 +13,7 @@ SELECT DISTINCT
     player_id,
     family_name,
     given_name,
+    CONCAT(family_name, ' ',given_name) AS full_name,
     birth_date,
     CASE
         WHEN goal_keeper = 1 THEN 'Goalkeeper'

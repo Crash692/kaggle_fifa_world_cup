@@ -20,7 +20,7 @@ def check_timeliness_per_row(table, date_column, primary_key_column, cursor):
     rows = cursor.fetchall()
 
     # Save results to a CSV file
-    with open(f"{table}_timeliness.csv", mode="w", newline="") as csvfile:
+    with open(f"data_quality_results/{table}_timeliness.csv", mode="w", newline="") as csvfile:
         writer = csv.writer(csvfile)
         writer.writerow([primary_key_column, date_column, "Timeliness_Result"]) 
         for row in rows:

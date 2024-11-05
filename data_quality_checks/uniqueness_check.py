@@ -65,7 +65,7 @@ def main():
         })
 
     df = pd.DataFrame(uniqueness_results)
-    df.to_csv("uniqueness_results.csv", index=False)
+    df.to_csv("data_quality_results/uniqueness_results.csv", index=False)
 
     cursor.close()
     connection.close()

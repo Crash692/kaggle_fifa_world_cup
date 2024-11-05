@@ -15,8 +15,11 @@ INSERT INTO silver.players (
 SELECT 
     key_id, 
     player_id, 
-    INITCAP(family_name) AS family_name, 
-    INITCAP(given_name) AS given_name, 
+    INITCAP(family_name) AS family_name,
+    CASE 
+        WHEN given_name = 'not available' THEN NULL 
+        ELSE INITCAP(given_name) 
+    END AS given_name, 
     CASE 
         WHEN birth_date = 'not available' THEN NULL 
         ELSE birth_date::DATE 
