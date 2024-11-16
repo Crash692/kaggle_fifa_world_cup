@@ -1,0 +1,8 @@
+{
+    "database": "world_cup_db",
+    "user": "myuser",
+    "password": "mypassword",
+    "host": "localhost",
+    "port": "5432"
+  }
+  
