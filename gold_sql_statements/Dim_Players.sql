@@ -8,7 +8,7 @@ CREATE TABLE IF NOT EXISTS gold.Dim_Players (
     player_wikipedia_link TEXT
 );
 
-INSERT INTO gold.Dim_Players (player_id, family_name, given_name, birth_date, position, player_wikipedia_link)
+INSERT INTO gold.Dim_Players (player_id, family_name, full_name, given_name, birth_date, position, player_wikipedia_link)
 SELECT DISTINCT
     player_id,
     family_name,

@@ -1,5 +1,5 @@
 CREATE TABLE IF NOT EXISTS gold.Fact_Team_Appearances (
-    appearance_id SERIAL PRIMARY KEY,
+    appearance_id INT PRIMARY KEY,
     match_id VARCHAR REFERENCES gold.Fact_Match_Results(match_id),
     team_id VARCHAR REFERENCES gold.Dim_Teams(team_id),
     opponent_id VARCHAR REFERENCES gold.Dim_Teams(team_id),
@@ -17,6 +17,7 @@ CREATE TABLE IF NOT EXISTS gold.Fact_Team_Appearances (
 );
 
 INSERT INTO gold.Fact_Team_Appearances (
+    appearance_id,
     match_id,
     team_id,
     opponent_id,
@@ -32,7 +33,8 @@ INSERT INTO gold.Fact_Team_Appearances (
     penalties_for,
     penalties_against
 )
-SELECT 
+SELECT
+    ta.key_id as appearance_id,
     ta.match_id,
     ta.team_id,
     ta.opponent_id,
