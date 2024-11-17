@@ -1,14 +1,12 @@
 import psycopg2
 import os
+import json
 
-# Database connection settings
-db_config = {
-    "dbname": "world_cup_db",
-    "user": "myuser",
-    "password": "mypassword",
-    "host": "localhost",
-    "port": "5432"
-}
+# Load database configuration
+config_path = "config.json"
+with open(config_path, "r") as file:
+    db_config = json.load(file)
+
 
 # Folder containing SQL files
 statements_folder = "gold_sql_statements"
@@ -33,7 +31,8 @@ execution_order = [
     "Fact_Referee_Apperances.sql",
     "Fact_Substitutions.sql",
     "Fact_Team_Apperances.sql",
-    "Fact_Awards_Winners.sql"
+    "Fact_Awards_Winners.sql",
+    "Fact_Team_Match_result.sql"
 ]
 
 def execute_sql_file(cursor, file_path):

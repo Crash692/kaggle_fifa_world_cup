@@ -1,14 +1,11 @@
 import psycopg2
 import os
+import json
 
-# Database connection settings
-db_config = {
-    "dbname": "world_cup_db",
-    "user": "myuser",
-    "password": "mypassword",
-    "host": "localhost",
-    "port": "5432"
-}
+# Load database configuration
+config_path = "config.json"
+with open(config_path, "r") as file:
+    db_config = json.load(file)
 
 # Folder containing SQL files
 statements_folder = "silver_sql_statements"
